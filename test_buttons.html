@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Button Test - Aram Algorithm</title>
+</head>
+<body>
+    <h1>Button Functionality Test</h1>
+    <p>Server should be running at: <a href="http://localhost:3000" target="_blank">http://localhost:3000</a></p>
+    
+    <div>
+        <h2>Features to test:</h2>
+        <ul>
+            <li>✅ Click "Get Started" button → Should open contact modal</li>
+            <li>✅ Click "Download Article 5 Card" → Should download a text file</li>
+            <li>✅ Fill out and submit contact form → Should show success notification</li>
+            <li>✅ Check console for event tracking logs</li>
+        </ul>
+    </div>
+    
+    <script>
+        // Auto-open the site in a new tab
+        setTimeout(() => {
+            window.open('http://localhost:3000', '_blank');
+        }, 1000);
+    </script>
+</body>
+</html>

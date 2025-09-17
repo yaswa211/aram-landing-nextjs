@@ -1,0 +1,1051 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= title %></title>
+    <meta name="description" content="<%= description %>">
+    <meta name="keywords" content="AI red teaming, EU AI Act, Article 5 compliance, AI safety, AI security, prohibited AI practices">
+    <meta name="author" content="Aram Algorithm">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="<%= canonical %>">
+    <meta property="og:title" content="<%= title %>">
+    <meta property="og:description" content="<%= description %>">
+    <meta property="og:image" content="<%= ogImage %>">
+    <meta property="og:site_name" content="Aram Algorithm">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="<%= canonical %>">
+    <meta property="twitter:title" content="<%= title %>">
+    <meta property="twitter:description" content="<%= description %>">
+    <meta property="twitter:image" content="<%= ogImage %>">
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href="<%= canonical %>">
+    
+    <!-- Favicon -->
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Styles -->
+    <link rel="stylesheet" href="/css/main.css">
+    
+    <!-- JSON-LD structured data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "Aram Algorithm",
+      "url": "<%= canonical %>",
+      "logo": "<%= canonical %>/images/logo.png",
+      "description": "<%= description %>",
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "contactType": "Customer Service",
+        "availableLanguage": "English"
+      },
+      "sameAs": []
+    }
+    </script>
+</head>
+<body>
+    <!-- Hero Section -->
+    <section id="hero" class="hero-section">
+        <div class="hero-overlay"></div>
+        <div class="container hero-container">
+            <div class="hero-content">
+                <div class="hero-icon">
+                    <svg class="shield-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M12 2L4 7v7c0 5.55 3.84 9.74 8 10 4.16-.26 8-4.45 8-10V7l-8-5z"/>
+                        <path d="M9 12l2 2 4-4"/>
+                    </svg>
+                </div>
+                
+                <h1 class="hero-title">
+                    <span class="hero-brand">Aram Algorithm</span>
+                    <span class="hero-subtitle">Red Teaming for AI Safety, Security & EU AI Act Compliance</span>
+                </h1>
+                
+                <p class="hero-tagline">"Turning AI Risk into AI Readiness."</p>
+                
+                <p class="hero-description">
+                    We help you red team AI systems against real-world threats and regulatory pitfalls, 
+                    producing evidence-ready compliance for the EU AI Act and beyond.
+                </p>
+                
+                <div class="hero-actions">
+                    <button class="btn btn-primary" onclick="openContact()">
+                        Get Started
+                        <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M5 12h14m-7-7l7 7-7 7"/>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Social Proof Section -->
+    <section id="social-proof" class="social-proof-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Trusted by Leading AI Organizations</h2>
+                <p class="section-subtitle">Join industry leaders who rely on our red teaming expertise for EU AI Act compliance</p>
+            </div>
+            
+            <div class="trust-indicators">
+                <div class="trust-item">
+                    <div class="trust-number">500+</div>
+                    <div class="trust-label">AI Systems Tested</div>
+                </div>
+                <div class="trust-item">
+                    <div class="trust-number">98%</div>
+                    <div class="trust-label">Compliance Success Rate</div>
+                </div>
+                <div class="trust-item">
+                    <div class="trust-number">50+</div>
+                    <div class="trust-label">Enterprise Clients</div>
+                </div>
+                <div class="trust-item">
+                    <div class="trust-number">Zero</div>
+                    <div class="trust-label">Regulatory Violations</div>
+                </div>
+            </div>
+            
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <div class="testimonial-content">
+                        "Aram Algorithm's red teaming uncovered critical Article 5 vulnerabilities we never anticipated. Their evidence bundles were instrumental in our successful regulatory review."
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-info">
+                            <div class="author-name">Dr. Sarah Chen</div>
+                            <div class="author-title">Chief AI Officer, TechCorp AI</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="testimonial-card">
+                    <div class="testimonial-content">
+                        "The depth of their EU AI Act expertise is unmatched. They helped us navigate complex systemic risk obligations with confidence."
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-info">
+                            <div class="author-name">Marcus Rodriguez</div>
+                            <div class="author-title">VP of Compliance, FrontierAI</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="testimonial-card">
+                    <div class="testimonial-content">
+                        "From startup to Series B, Aram Algorithm scaled with us. Their compliance-by-design approach gave investors the confidence they needed."
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-info">
+                            <div class="author-name">Lisa Park</div>
+                            <div class="author-title">Founder & CEO, GenAI Innovations</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="certifications">
+                <h3>Certifications & Partnerships</h3>
+                <div class="cert-grid">
+                    <div class="cert-item">🏆 ISO 27001 Certified</div>
+                    <div class="cert-item">🔒 SOC 2 Type II</div>
+                    <div class="cert-item">🇪🇺 EU AI Act Expert Partner</div>
+                    <div class="cert-item">🤝 NIST AI Risk Framework Aligned</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Interactive Article Selector -->
+    <section id="article-selector" class="article-selector-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">EU AI Act Compliance Navigator</h2>
+                <p class="section-subtitle">Select an article to explore comprehensive red teaming probes and compliance strategies</p>
+            </div>
+            
+            <div class="article-tabs">
+                <button class="article-tab active" data-article="5">Article 5<span>Prohibited AI Practices</span></button>
+                <button class="article-tab" data-article="50">Article 50<span>Transparency Obligations</span></button>
+                <button class="article-tab" data-article="51">Article 51<span>Classification of GP AI Models</span></button>
+                <button class="article-tab" data-article="52">Article 52<span>Regulatory Procedures</span></button>
+                <button class="article-tab" data-article="53">Article 53<span>GP AI Model Obligations</span></button>
+                <button class="article-tab" data-article="54">Article 54<span>Authorized Representatives</span></button>
+                <button class="article-tab" data-article="55">Article 55<span>Systemic Risk Obligations</span></button>
+            </div>
+            
+            <div class="article-content" id="article-content">
+                <!-- Content will be dynamically loaded here -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Methodology Section -->
+    <section id="methodology" class="methodology-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">The Aram Red Playbook Methodology</h2>
+                <p class="section-subtitle">Our battle-tested approach to AI red teaming and compliance validation</p>
+            </div>
+            
+            <div class="methodology-flow">
+                <div class="method-step">
+                    <div class="step-indicator">01</div>
+                    <div class="step-content">
+                        <h3>Discovery & Risk Mapping</h3>
+                        <p>Comprehensive analysis of your AI system's use cases, data flows, and regulatory exposure across EU AI Act articles</p>
+                        <div class="step-details">
+                            <span class="detail-item">⚡ 2-3 days</span>
+                            <span class="detail-item">📋 Risk matrix output</span>
+                            <span class="detail-item">🎯 Targeted test planning</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="method-step">
+                    <div class="step-indicator">02</div>
+                    <div class="step-content">
+                        <h3>Adversarial Test Execution</h3>
+                        <p>Deploy our library of 1000+ prompt attacks, edge cases, and boundary-testing scenarios across all identified risk areas</p>
+                        <div class="step-details">
+                            <span class="detail-item">🔬 1-2 weeks</span>
+                            <span class="detail-item">🎯 Automated + manual testing</span>
+                            <span class="detail-item">📊 Real-time monitoring</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="method-step">
+                    <div class="step-indicator">03</div>
+                    <div class="step-content">
+                        <h3>Evidence Collection & Analysis</h3>
+                        <p>Capture immutable logs, analyze system responses, and map findings to specific EU AI Act requirements</p>
+                        <div class="step-details">
+                            <span class="detail-item">📝 3-5 days</span>
+                            <span class="detail-item">🔐 Cryptographic signing</span>
+                            <span class="detail-item">⚖️ Legal-ready documentation</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="method-step">
+                    <div class="step-indicator">04</div>
+                    <div class="step-content">
+                        <h3>Compliance Reporting & Hardening</h3>
+                        <p>Deliver regulator-ready evidence bundles plus actionable recommendations for system hardening</p>
+                        <div class="step-details">
+                            <span class="detail-item">📊 1-2 days</span>
+                            <span class="detail-item">🏛️ Regulator-friendly format</span>
+                            <span class="detail-item">🛠️ Implementation guidance</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="tech-stack">
+                <h3>Our Technology Stack</h3>
+                <div class="tech-grid">
+                    <div class="tech-item">
+                        <div class="tech-icon">🤖</div>
+                        <div class="tech-name">AI Models</div>
+                        <div class="tech-desc">Claude, GPT-4, Llama 2/3, Custom Fine-tuned</div>
+                    </div>
+                    <div class="tech-item">
+                        <div class="tech-icon">🔬</div>
+                        <div class="tech-name">Testing Framework</div>
+                        <div class="tech-desc">Garak, Custom Red Team Tools, MLOps Pipeline</div>
+                    </div>
+                    <div class="tech-item">
+                        <div class="tech-icon">📊</div>
+                        <div class="tech-name">Evidence Platform</div>
+                        <div class="tech-desc">Immutable Logging, Blockchain Signatures, GDPR Compliant</div>
+                    </div>
+                    <div class="tech-item">
+                        <div class="tech-icon">🔗</div>
+                        <div class="tech-name">Integrations</div>
+                        <div class="tech-desc">CI/CD Hooks, API Endpoints, Slack/Teams Alerts</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- The Problem Section -->
+    <section id="problem" class="problem-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">The Problem</h2>
+                <p class="section-subtitle">AI systems are powerful — but unchecked, they risk:</p>
+            </div>
+            
+            <div class="grid grid-4">
+                <div class="card problem-card">
+                    <div class="card-icon red">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M10.29 3.86L1.82 18a2 2 0 001.71 3h16.94a2 2 0 001.71-3L13.71 3.86a2 2 0 00-3.42 0z"/>
+                            <line x1="12" y1="9" x2="12" y2="13"/>
+                            <line x1="12" y1="17" x2="12.01" y2="17"/>
+                        </svg>
+                    </div>
+                    <h3 class="card-title">Prohibited Uses</h3>
+                    <p class="card-description">Crossing into prohibited uses (EU AI Act Article 5)</p>
+                </div>
+                
+                <div class="card problem-card">
+                    <div class="card-icon orange">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M8 2v4m8-4v4M3 10h18M5 4h14a2 2 0 012 2v14a2 2 0 01-2 2H5a2 2 0 01-2-2V6a2 2 0 012-2zM12 14l-3 3m0-3l3 3"/>
+                        </svg>
+                    </div>
+                    <h3 class="card-title">Security Vulnerabilities</h3>
+                    <p class="card-description">Jailbreaks, prompt injection, data leaks</p>
+                </div>
+                
+                <div class="card problem-card">
+                    <div class="card-icon yellow">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M16 16l-4-4-4 4M12 12V3"/>
+                            <path d="M20 7l-8-4-8 4"/>
+                        </svg>
+                    </div>
+                    <h3 class="card-title">Regulatory Non-Compliance</h3>
+                    <p class="card-description">Regulatory non-compliance leading to fines or bans</p>
+                </div>
+                
+                <div class="card problem-card">
+                    <div class="card-icon blue">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M12 2L4 7v7c0 5.55 3.84 9.74 8 10 4.16-.26 8-4.45 8-10V7l-8-5z"/>
+                        </svg>
+                    </div>
+                    <h3 class="card-title">Trust Issues</h3>
+                    <p class="card-description">Loss of customer trust & market access</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Our Solution Section -->
+    <section id="solution" class="solution-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Our Solution</h2>
+                <p class="section-subtitle">The Aram Algorithm Red Playbook:</p>
+            </div>
+            
+            <div class="grid grid-4">
+                <div class="card solution-card">
+                    <div class="card-icon-large red">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="12" cy="12" r="10"/>
+                            <circle cx="12" cy="12" r="6"/>
+                            <circle cx="12" cy="12" r="2"/>
+                        </svg>
+                    </div>
+                    <h3 class="card-title">Automated Red Teaming</h3>
+                    <p class="card-description">Simulated attacks, edge cases, adversarial prompts</p>
+                </div>
+                
+                <div class="card solution-card">
+                    <div class="card-icon-large green">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M22 11.08V12a10 10 0 11-5.93-9.14"/>
+                            <polyline points="22,4 12,14.01 9,11.01"/>
+                        </svg>
+                    </div>
+                    <h3 class="card-title">Compliance-by-Design</h3>
+                    <p class="card-description">Evidence mapped directly to EU AI Act articles</p>
+                </div>
+                
+                <div class="card solution-card">
+                    <div class="card-icon-large blue">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/>
+                            <polyline points="14,2 14,8 20,8"/>
+                            <line x1="16" y1="13" x2="8" y2="13"/>
+                            <line x1="16" y1="17" x2="8" y2="17"/>
+                            <polyline points="10,9 9,9 8,9"/>
+                        </svg>
+                    </div>
+                    <h3 class="card-title">Audit-Ready Reports</h3>
+                    <p class="card-description">Regulator-friendly bundles with signed logs and justifications</p>
+                </div>
+                
+                <div class="card solution-card">
+                    <div class="card-icon-large purple">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polygon points="13,2 3,14 12,14 11,22 21,10 12,10 13,2"/>
+                        </svg>
+                    </div>
+                    <h3 class="card-title">Continuous Hardening</h3>
+                    <p class="card-description">Integrate guardrails into dev, test, and deploy cycles</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Who We Serve Section -->
+    <section id="who-we-serve" class="serve-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Who We Serve</h2>
+                <p class="section-subtitle">Our services are designed for all key stakeholders in the AI ecosystem</p>
+            </div>
+            
+            <div class="grid grid-4">
+                <div class="card serve-card">
+                    <div class="card-icon-gradient red-pink">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/>
+                            <line x1="3" y1="6" x2="21" y2="6"/>
+                            <path d="M16 10a4 4 0 01-8 0"/>
+                        </svg>
+                    </div>
+                    <h3 class="card-title">GenAI Startups</h3>
+                    <p class="card-description">De-risk MVPs, attract investors with compliance evidence</p>
+                </div>
+                
+                <div class="card serve-card">
+                    <div class="card-icon-gradient blue-cyan">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <rect x="2" y="3" width="20" height="14" rx="2" ry="2"/>
+                            <line x1="8" y1="21" x2="16" y2="21"/>
+                            <line x1="12" y1="17" x2="12" y2="21"/>
+                        </svg>
+                    </div>
+                    <h3 class="card-title">Frontier Model Providers</h3>
+                    <p class="card-description">Demonstrate systemic safety & refusal robustness at scale</p>
+                </div>
+                
+                <div class="card serve-card">
+                    <div class="card-icon-gradient green-teal">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M3 21h18M4 7h16M6 3h12l-1 4H7l-1-4zM4 7v10a2 2 0 002 2h12a2 2 0 002-2V7"/>
+                        </svg>
+                    </div>
+                    <h3 class="card-title">GenAI Enterprises</h3>
+                    <p class="card-description">Integrate compliance into product pipelines & governance</p>
+                </div>
+                
+                <div class="card serve-card">
+                    <div class="card-icon-gradient purple-indigo">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M3 21h18M4 7h16M6 3h12l-1 4H7l-1-4zM9 12l2 2 4-4"/>
+                        </svg>
+                    </div>
+                    <h3 class="card-title">Regulators & Customers</h3>
+                    <p class="card-description">Independent, transparent audit bundles and boundary testing</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works Section -->
+    <section id="how-it-works" class="works-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">How It Works</h2>
+            </div>
+            
+            <div class="grid grid-4">
+                <div class="step-card">
+                    <div class="step-number">1</div>
+                    <div class="step-content">
+                        <div class="step-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M2 3h6a4 4 0 014 4v14a3 3 0 00-3-3H2z"/>
+                                <path d="M22 3h-6a4 4 0 00-4 4v14a3 3 0 013-3h7z"/>
+                            </svg>
+                        </div>
+                        <h3 class="step-title">Spec & Scope</h3>
+                        <p class="step-description">Map use cases to EU AI Act risk categories</p>
+                    </div>
+                </div>
+                
+                <div class="step-card">
+                    <div class="step-number">2</div>
+                    <div class="step-content">
+                        <div class="step-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <circle cx="12" cy="12" r="10"/>
+                                <circle cx="12" cy="12" r="6"/>
+                                <circle cx="12" cy="12" r="2"/>
+                            </svg>
+                        </div>
+                        <h3 class="step-title">Red Team Execution</h3>
+                        <p class="step-description">Run adversarial test suites (prompt injection, misuse, Article 5 boundaries)</p>
+                    </div>
+                </div>
+                
+                <div class="step-card">
+                    <div class="step-number">3</div>
+                    <div class="step-content">
+                        <div class="step-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <rect x="3" y="11" width="18" height="11" rx="2" ry="2"/>
+                                <circle cx="12" cy="16" r="1"/>
+                                <path d="M7 11V7a5 5 0 0110 0v4"/>
+                            </svg>
+                        </div>
+                        <h3 class="step-title">Evidence Capture</h3>
+                        <p class="step-description">Immutable logs, refusal justifications, compliance mapping</p>
+                    </div>
+                </div>
+                
+                <div class="step-card">
+                    <div class="step-number">4</div>
+                    <div class="step-content">
+                        <div class="step-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/>
+                                <polyline points="14,2 14,8 20,8"/>
+                                <line x1="16" y1="13" x2="8" y2="13"/>
+                                <line x1="16" y1="17" x2="8" y2="17"/>
+                            </svg>
+                        </div>
+                        <h3 class="step-title">Reporting & Hardening</h3>
+                        <p class="step-description">Regulator-facing bundles + developer playbooks</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section id="pricing" class="pricing-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Flexible Pricing for Every AI Organization</h2>
+                <p class="section-subtitle">From startups to enterprise, we have a plan that scales with your compliance needs</p>
+            </div>
+            
+            <div class="pricing-toggle">
+                <span class="toggle-label">Monthly</span>
+                <label class="toggle-switch">
+                    <input type="checkbox" id="pricing-toggle">
+                    <span class="toggle-slider"></span>
+                </label>
+                <span class="toggle-label">Annual <span class="save-badge">Save 20%</span></span>
+            </div>
+            
+            <div class="pricing-grid">
+                <div class="pricing-card starter">
+                    <div class="plan-header">
+                        <h3 class="plan-name">Starter</h3>
+                        <div class="plan-price">
+                            <span class="price monthly-price">$2,500</span>
+                            <span class="price annual-price hidden">$2,000</span>
+                            <span class="price-period">/assessment</span>
+                        </div>
+                        <p class="plan-description">Perfect for GenAI startups and single-model testing</p>
+                    </div>
+                    
+                    <div class="plan-features">
+                        <div class="feature-item">✓ Up to 2 EU AI Act articles</div>
+                        <div class="feature-item">✓ 500+ red team prompts</div>
+                        <div class="feature-item">✓ Basic evidence bundle</div>
+                        <div class="feature-item">✓ Email support</div>
+                        <div class="feature-item">✓ 2-week delivery</div>
+                    </div>
+                    
+                    <button class="btn btn-outline" onclick="selectPlan('starter')">Get Started</button>
+                </div>
+                
+                <div class="pricing-card enterprise featured">
+                    <div class="popular-badge">Most Popular</div>
+                    <div class="plan-header">
+                        <h3 class="plan-name">Enterprise</h3>
+                        <div class="plan-price">
+                            <span class="price monthly-price">$15,000</span>
+                            <span class="price annual-price hidden">$12,000</span>
+                            <span class="price-period">/month</span>
+                        </div>
+                        <p class="plan-description">Comprehensive compliance for production AI systems</p>
+                    </div>
+                    
+                    <div class="plan-features">
+                        <div class="feature-item">✓ All EU AI Act articles</div>
+                        <div class="feature-item">✓ 1000+ red team prompts</div>
+                        <div class="feature-item">✓ Premium evidence bundles</div>
+                        <div class="feature-item">✓ CI/CD integration</div>
+                        <div class="feature-item">✓ 24/7 support</div>
+                        <div class="feature-item">✓ Continuous monitoring</div>
+                        <div class="feature-item">✓ Custom prompt library</div>
+                        <div class="feature-item">✓ Regulatory liaison</div>
+                    </div>
+                    
+                    <button class="btn btn-primary" onclick="selectPlan('enterprise')">Start Enterprise Trial</button>
+                </div>
+                
+                <div class="pricing-card custom">
+                    <div class="plan-header">
+                        <h3 class="plan-name">Custom</h3>
+                        <div class="plan-price">
+                            <span class="price">Contact Us</span>
+                        </div>
+                        <p class="plan-description">Tailored solutions for frontier models and regulators</p>
+                    </div>
+                    
+                    <div class="plan-features">
+                        <div class="feature-item">✓ Multi-language support</div>
+                        <div class="feature-item">✓ Custom integration APIs</div>
+                        <div class="feature-item">✓ White-label options</div>
+                        <div class="feature-item">✓ Dedicated team</div>
+                        <div class="feature-item">✓ SLA guarantees</div>
+                        <div class="feature-item">✓ On-premise deployment</div>
+                        <div class="feature-item">✓ Regulatory consulting</div>
+                    </div>
+                    
+                    <button class="btn btn-outline" onclick="openContact()">Contact Sales</button>
+                </div>
+            </div>
+            
+            <div class="roi-calculator">
+                <h3>ROI Calculator: Cost of Non-Compliance</h3>
+                <div class="calculator-grid">
+                    <div class="calc-input">
+                        <label>Annual AI Revenue ($)</label>
+                        <input type="number" id="revenue-input" placeholder="10,000,000" onchange="calculateROI()">
+                    </div>
+                    <div class="calc-output">
+                        <div class="calc-result">
+                            <div class="result-label">Potential EU AI Act Fine</div>
+                            <div class="result-value" id="fine-amount">$2,000,000</div>
+                        </div>
+                        <div class="calc-result">
+                            <div class="result-label">Aram Algorithm Annual Cost</div>
+                            <div class="result-value" id="protection-cost">$144,000</div>
+                        </div>
+                        <div class="calc-result roi-positive">
+                            <div class="result-label">Your Protection ROI</div>
+                            <div class="result-value" id="roi-value">1,289%</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Interactive Risk Assessment -->
+    <section id="risk-assessment" class="assessment-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Free AI Compliance Risk Assessment</h2>
+                <p class="section-subtitle">Answer 5 questions to get your personalized EU AI Act compliance score</p>
+            </div>
+            
+            <div class="assessment-container">
+                <div class="assessment-progress">
+                    <div class="progress-bar">
+                        <div class="progress-fill" style="width: 0%"></div>
+                    </div>
+                    <div class="progress-text">Question <span id="current-question">1</span> of 5</div>
+                </div>
+                
+                <div class="assessment-questions">
+                    <div class="question active" data-question="1">
+                        <h3>What type of AI system are you developing?</h3>
+                        <div class="question-options">
+                            <button class="option-btn" data-value="chatbot" onclick="selectOption(this, 'low')">Chatbot/Conversational AI</button>
+                            <button class="option-btn" data-value="recommendation" onclick="selectOption(this, 'medium')">Recommendation System</button>
+                            <button class="option-btn" data-value="biometric" onclick="selectOption(this, 'high')">Biometric/Recognition System</button>
+                            <button class="option-btn" data-value="autonomous" onclick="selectOption(this, 'high')">Autonomous/Decision-making System</button>
+                        </div>
+                    </div>
+                    
+                    <div class="question" data-question="2">
+                        <h3>What sectors does your AI system serve?</h3>
+                        <div class="question-options">
+                            <button class="option-btn" data-value="consumer" onclick="selectOption(this, 'low')">Consumer/Entertainment</button>
+                            <button class="option-btn" data-value="business" onclick="selectOption(this, 'medium')">Business/Enterprise</button>
+                            <button class="option-btn" data-value="healthcare" onclick="selectOption(this, 'high')">Healthcare/Medical</button>
+                            <button class="option-btn" data-value="finance" onclick="selectOption(this, 'high')">Finance/Banking</button>
+                            <button class="option-btn" data-value="government" onclick="selectOption(this, 'high')">Government/Law Enforcement</button>
+                        </div>
+                    </div>
+                    
+                    <div class="question" data-question="3">
+                        <h3>Does your AI system process personal data?</h3>
+                        <div class="question-options">
+                            <button class="option-btn" data-value="none" onclick="selectOption(this, 'low')">No personal data</button>
+                            <button class="option-btn" data-value="basic" onclick="selectOption(this, 'medium')">Basic personal data only</button>
+                            <button class="option-btn" data-value="sensitive" onclick="selectOption(this, 'high')">Sensitive personal data</button>
+                            <button class="option-btn" data-value="biometric" onclick="selectOption(this, 'high')">Biometric/health data</button>
+                        </div>
+                    </div>
+                    
+                    <div class="question" data-question="4">
+                        <h3>What's your current compliance maturity?</h3>
+                        <div class="question-options">
+                            <button class="option-btn" data-value="none" onclick="selectOption(this, 'high')">No formal compliance program</button>
+                            <button class="option-btn" data-value="basic" onclick="selectOption(this, 'medium')">Basic internal guidelines</button>
+                            <button class="option-btn" data-value="formal" onclick="selectOption(this, 'low')">Formal compliance framework</button>
+                            <button class="option-btn" data-value="audited" onclick="selectOption(this, 'low')">Externally audited program</button>
+                        </div>
+                    </div>
+                    
+                    <div class="question" data-question="5">
+                        <h3>When do you plan to deploy in the EU?</h3>
+                        <div class="question-options">
+                            <button class="option-btn" data-value="deployed" onclick="selectOption(this, 'high')">Already deployed</button>
+                            <button class="option-btn" data-value="soon" onclick="selectOption(this, 'high')">Within 6 months</button>
+                            <button class="option-btn" data-value="planning" onclick="selectOption(this, 'medium')">6-12 months</button>
+                            <button class="option-btn" data-value="future" onclick="selectOption(this, 'low')">12+ months</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="assessment-actions">
+                    <button class="btn btn-outline" id="prev-btn" onclick="previousQuestion()" style="display: none;">Previous</button>
+                    <button class="btn btn-primary" id="next-btn" onclick="nextQuestion()" disabled>Next</button>
+                    <button class="btn btn-primary" id="results-btn" onclick="showResults()" style="display: none;">Get My Results</button>
+                </div>
+            </div>
+            
+            <div class="assessment-results" id="assessment-results" style="display: none;">
+                <div class="results-header">
+                    <h3>Your EU AI Act Compliance Risk Score</h3>
+                    <div class="risk-score" id="risk-score-display">75</div>
+                    <div class="risk-level" id="risk-level-display">Medium Risk</div>
+                </div>
+                
+                <div class="results-recommendations" id="results-recommendations">
+                    <!-- Dynamic recommendations will be inserted here -->
+                </div>
+                
+                <div class="results-actions">
+                    <button class="btn btn-primary" onclick="openContact()">Book Free Consultation</button>
+                    <button class="btn btn-outline" onclick="downloadRiskReport()">Download Full Report</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gamma Prompt Section -->
+    <section id="gamma-prompt" class="gamma-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Create Your Own EU AI Act Compliance Cards</h2>
+                <p class="section-subtitle">Use our Gamma.app prompts to generate professional compliance presentations for any EU AI Act article in minutes</p>
+            </div>
+            
+            <div class="gamma-article-selector">
+                <h3>Choose Your Article</h3>
+                <div class="article-selector-grid">
+                    <button class="article-selector-btn active" data-gamma-article="5">
+                        <div class="selector-title">Article 5</div>
+                        <div class="selector-subtitle">Prohibited AI Practices</div>
+                    </button>
+                    <button class="article-selector-btn" data-gamma-article="50">
+                        <div class="selector-title">Article 50</div>
+                        <div class="selector-subtitle">Transparency Obligations</div>
+                    </button>
+                    <button class="article-selector-btn" data-gamma-article="51">
+                        <div class="selector-title">Article 51</div>
+                        <div class="selector-subtitle">GP AI Model Classification</div>
+                    </button>
+                    <button class="article-selector-btn" data-gamma-article="52">
+                        <div class="selector-title">Article 52</div>
+                        <div class="selector-subtitle">Regulatory Procedures</div>
+                    </button>
+                    <button class="article-selector-btn" data-gamma-article="53">
+                        <div class="selector-title">Article 53</div>
+                        <div class="selector-subtitle">GP AI Model Obligations</div>
+                    </button>
+                    <button class="article-selector-btn" data-gamma-article="54">
+                        <div class="selector-title">Article 54</div>
+                        <div class="selector-subtitle">Authorized Representatives</div>
+                    </button>
+                    <button class="article-selector-btn" data-gamma-article="55">
+                        <div class="selector-title">Article 55</div>
+                        <div class="selector-subtitle">Systemic Risk Obligations</div>
+                    </button>
+                </div>
+            </div>
+            
+            <div class="gamma-showcase">
+                <div class="gamma-preview">
+                    <div class="preview-card" id="gamma-preview-card">
+                        <!-- Preview content will be dynamically updated based on selected article -->
+                    </div>
+                </div>
+                
+                <div class="gamma-content">
+                    <div class="gamma-intro">
+                        <h3>Generate Professional Compliance Cards with Gamma.app</h3>
+                        <p>Transform our expert knowledge into stunning visual presentations for your team, stakeholders, or regulatory discussions.</p>
+                        
+                        <div class="gamma-features">
+                            <div class="feature">
+                                <span class="feature-icon">⚡</span>
+                                <span class="feature-text">Generate in 2 minutes</span>
+                            </div>
+                            <div class="feature">
+                                <span class="feature-icon">🎨</span>
+                                <span class="feature-text">Professional design</span>
+                            </div>
+                            <div class="feature">
+                                <span class="feature-icon">📱</span>
+                                <span class="feature-text">Mobile responsive</span>
+                            </div>
+                            <div class="feature">
+                                <span class="feature-icon">🔄</span>
+                                <span class="feature-text">Customizable content</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="gamma-prompt-container">
+                        <div class="prompt-header">
+                            <h4>Copy This Gamma.app Prompt</h4>
+                            <button class="copy-btn" id="copy-gamma-btn">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                                    <path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"></path>
+                                </svg>
+                                Copy Prompt
+                            </button>
+                        </div>
+                        
+                        <div class="prompt-content" id="gamma-prompt-text">
+                            <!-- Prompt content will be dynamically updated based on selected article -->
+                        </div>
+                        
+                        <div class="prompt-actions">
+                            <button class="btn btn-primary" id="open-gamma-btn">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="btn-icon">
+                                    <path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"></path>
+                                    <polyline points="15,3 21,3 21,9"></polyline>
+                                    <line x1="10" y1="14" x2="21" y2="3"></line>
+                                </svg>
+                                Open Gamma.app
+                            </button>
+                            <button class="btn btn-outline" id="download-gamma-guide-btn">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="btn-icon">
+                                    <path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"></path>
+                                    <polyline points="7,10 12,15 17,10"></polyline>
+                                    <line x1="12" y1="15" x2="12" y2="3"></line>
+                                </svg>
+                                Download Full Guide
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="gamma-testimonial">
+                <div class="testimonial-content">
+                    "Using the Gamma prompt, we created stunning compliance presentations for our board in under 10 minutes. It's become our go-to tool for regulatory discussions."
+                </div>
+                <div class="testimonial-author">
+                    <div class="author-name">Alex Thompson</div>
+                    <div class="author-title">Chief Compliance Officer, AI Dynamics</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Resources Section -->
+    <section id="resources" class="resources-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Free Resources & Tools</h2>
+                <p class="section-subtitle">Everything you need to understand and implement EU AI Act compliance</p>
+            </div>
+            
+            <div class="resources-grid">
+                <div class="resource-card">
+                    <div class="resource-icon">📚</div>
+                    <h3>EU AI Act Guide</h3>
+                    <p>Comprehensive 50-page guide covering all articles, requirements, and implementation strategies</p>
+                    <div class="resource-meta">
+                        <span class="meta-item">📄 50 pages</span>
+                        <span class="meta-item">⭐ 4.8/5 rating</span>
+                        <span class="meta-item">🔄 Updated Dec 2024</span>
+                    </div>
+                    <button class="resource-btn" onclick="downloadResource('ai-act-guide')">Download Free</button>
+                </div>
+                
+                <div class="resource-card">
+                    <div class="resource-icon">✅</div>
+                    <h3>Compliance Checklist</h3>
+                    <p>Step-by-step checklist for each EU AI Act article with actionable implementation steps</p>
+                    <div class="resource-meta">
+                        <span class="meta-item">📋 30 checkpoints</span>
+                        <span class="meta-item">⚡ Quick assessment</span>
+                        <span class="meta-item">📊 Progress tracking</span>
+                    </div>
+                    <button class="resource-btn" onclick="downloadResource('compliance-checklist')">Get Checklist</button>
+                </div>
+                
+                <div class="resource-card">
+                    <div class="resource-icon">🎯</div>
+                    <h3>Red Team Prompt Library</h3>
+                    <p>100 sample red team prompts for testing Article 5 prohibited practices in your AI systems</p>
+                    <div class="resource-meta">
+                        <span class="meta-item">🔬 100 prompts</span>
+                        <span class="meta-item">📂 Categorized by article</span>
+                        <span class="meta-item">💡 Usage examples</span>
+                    </div>
+                    <button class="resource-btn" onclick="downloadResource('prompt-library')">Download Prompts</button>
+                </div>
+                
+                <div class="resource-card">
+                    <div class="resource-icon">📊</div>
+                    <h3>ROI Calculator</h3>
+                    <p>Interactive calculator to estimate the cost of EU AI Act non-compliance vs. prevention</p>
+                    <div class="resource-meta">
+                        <span class="meta-item">💰 Cost analysis</span>
+                        <span class="meta-item">📈 ROI projections</span>
+                        <span class="meta-item">🎨 Custom scenarios</span>
+                    </div>
+                    <button class="resource-btn" onclick="openCalculator()">Use Calculator</button>
+                </div>
+                
+                <div class="resource-card">
+                    <div class="resource-icon">📺</div>
+                    <h3>Webinar Series</h3>
+                    <p>Monthly webinars covering latest EU AI Act developments, case studies, and best practices</p>
+                    <div class="resource-meta">
+                        <span class="meta-item">🗓️ Monthly sessions</span>
+                        <span class="meta-item">👥 Expert speakers</span>
+                        <span class="meta-item">💬 Live Q&A</span>
+                    </div>
+                    <button class="resource-btn" onclick="registerWebinar()">Register Free</button>
+                </div>
+                
+                <div class="resource-card">
+                    <div class="resource-icon">📰</div>
+                    <h3>Weekly Newsletter</h3>
+                    <p>Stay updated with the latest EU AI Act news, regulatory changes, and compliance insights</p>
+                    <div class="resource-meta">
+                        <span class="meta-item">📬 Weekly delivery</span>
+                        <span class="meta-item">🎯 Curated content</span>
+                        <span class="meta-item">👥 10,000+ subscribers</span>
+                    </div>
+                    <button class="resource-btn" onclick="subscribeNewsletter()">Subscribe Free</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Aram Algorithm Section -->
+    <section id="why-us" class="why-section">
+        <div class="container">
+            <div class="section-header light">
+                <h2 class="section-title">Why Aram Algorithm</h2>
+            </div>
+            
+            <div class="grid grid-4">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M16 16l-4-4-4 4M12 12V3"/>
+                            <path d="M20 7l-8-4-8 4"/>
+                        </svg>
+                    </div>
+                    <h3 class="feature-title">EU AI Act Focused</h3>
+                    <p class="feature-description">Purpose-built for Articles 5A–5F and beyond</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                        </svg>
+                    </div>
+                    <h3 class="feature-title">Engineering-Ready Specs</h3>
+                    <p class="feature-description">Plug into dev pipelines with Kiro-style templates</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/>
+                            <polyline points="14,2 14,8 20,8"/>
+                            <line x1="16" y1="13" x2="8" y2="13"/>
+                        </svg>
+                    </div>
+                    <h3 class="feature-title">Regulator Evidence</h3>
+                    <p class="feature-description">Produce signed, tamper-proof bundles for audits</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/>
+                            <circle cx="12" cy="12" r="3"/>
+                        </svg>
+                    </div>
+                    <h3 class="feature-title">Future-Proof</h3>
+                    <p class="feature-description">Adaptable to global AI regulations and sectoral standards</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action Section -->
+    <section id="cta" class="cta-section">
+        <div class="container">
+            <div class="cta-content">
+                <h2 class="cta-title">Build AI that's bold, safe, and compliant.</h2>
+                <p class="cta-subtitle">Ready to turn AI risk into AI readiness? Let's build something extraordinary together.</p>
+                
+                <div class="cta-actions">
+                    <button class="btn btn-primary large" onclick="openContact()">
+                        Book a Red Teaming Session
+                        <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M5 12h14m-7-7l7 7-7 7"/>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <div class="footer-logo">
+                        <svg class="shield-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M12 2L4 7v7c0 5.55 3.84 9.74 8 10 4.16-.26 8-4.45 8-10V7l-8-5z"/>
+                            <path d="M9 12l2 2 4-4"/>
+                        </svg>
+                        <span>Aram Algorithm</span>
+                    </div>
+                    <p class="footer-tagline">Red Teaming for AI Safety, Security & EU AI Act Compliance</p>
+                    <p class="footer-copyright">© <%= year %> Aram Algorithm. All rights reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="/js/main.js"></script>
+    
+    <% if (env === 'production') { %>
+    <!-- Analytics (placeholder) -->
+    <script>
+        // Add your analytics code here
+        console.log('Analytics loaded');
+    </script>
+    <% } %>
+</body>
+</html>
