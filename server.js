@@ -12,10 +12,14 @@ const app = express();
 const PORT = process.env.PORT || 3000;
 const NODE_ENV = process.env.NODE_ENV || 'development';
 
-// Ensure logs directory exists
+// Ensure logs directory exists (only for local development)
 const logsDir = path.join(__dirname, 'logs');
-if (!fs.existsSync(logsDir)) {
-  fs.mkdirSync(logsDir, { recursive: true });
+if (NODE_ENV !== 'production' && !fs.existsSync(logsDir)) {
+  try {
+    fs.mkdirSync(logsDir, { recursive: true });
+  } catch (err) {
+    console.warn('Could not create logs directory:', err.message);
+  }
 }
 
 // Security middleware
@@ -48,9 +52,10 @@ app.use(express.json({ limit: '10mb' }));
 app.use(express.urlencoded({ extended: true, limit: '10mb' }));
 
 // Logging
+// In serverless environments like Vercel, use console logging
 if (NODE_ENV === 'production') {
-  const accessLogStream = fs.createWriteStream(path.join(logsDir, 'access.log'), { flags: 'a' });
-  app.use(morgan('combined', { stream: accessLogStream }));
+  // Use console logging for production (works in Vercel)
+  app.use(morgan('combined'));
 } else {
   app.use(morgan('dev'));
 }
@@ -129,29 +134,32 @@ app.use((err, req, res, next) => {
   }
 });
 
-// Graceful shutdown
-process.on('SIGTERM', () => {
-  console.log('SIGTERM received, shutting down gracefully');
-  server.close(() => {
-    console.log('Process terminated');
-    process.exit(0);
+// For local development, start the server
+if (require.main === module) {
+  const server = app.listen(PORT, () => {
+    console.log(`🚀 Aram Algorithm server running on port ${PORT}`);
+    console.log(`🌐 Environment: ${NODE_ENV}`);
+    console.log(`📍 URL: http://localhost:${PORT}`);
+    console.log(`⏰ Started at: ${new Date().toISOString()}`);
   });
-});
 
-process.on('SIGINT', () => {
-  console.log('SIGINT received, shutting down gracefully');
-  server.close(() => {
-    console.log('Process terminated');
-    process.exit(0);
+  // Graceful shutdown for local development
+  process.on('SIGTERM', () => {
+    console.log('SIGTERM received, shutting down gracefully');
+    server.close(() => {
+      console.log('Process terminated');
+      process.exit(0);
+    });
   });
-});
 
-// Start server
-const server = app.listen(PORT, () => {
-  console.log(`🚀 Aram Algorithm server running on port ${PORT}`);
-  console.log(`🌐 Environment: ${NODE_ENV}`);
-  console.log(`📍 URL: http://localhost:${PORT}`);
-  console.log(`⏰ Started at: ${new Date().toISOString()}`);
-});
+  process.on('SIGINT', () => {
+    console.log('SIGINT received, shutting down gracefully');
+    server.close(() => {
+      console.log('Process terminated');
+      process.exit(0);
+    });
+  });
+}
 
+// Export the Express app for Vercel
 module.exports = app;
