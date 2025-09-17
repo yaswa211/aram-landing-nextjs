@@ -5,22 +5,13 @@ const compression = require('compression');
 const cors = require('cors');
 const rateLimit = require('express-rate-limit');
 const morgan = require('morgan');
-const fs = require('fs');
 require('dotenv').config();
 
 const app = express();
 const PORT = process.env.PORT || 3000;
 const NODE_ENV = process.env.NODE_ENV || 'development';
 
-// Ensure logs directory exists (only for local development)
-const logsDir = path.join(__dirname, 'logs');
-if (NODE_ENV !== 'production' && !fs.existsSync(logsDir)) {
-  try {
-    fs.mkdirSync(logsDir, { recursive: true });
-  } catch (err) {
-    console.warn('Could not create logs directory:', err.message);
-  }
-}
+// Note: No logs directory creation for serverless compatibility
 
 // Security middleware
 app.use(helmet({
