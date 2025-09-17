@@ -15,8 +15,8 @@ A modern, responsive Node.js Express landing page for Aram Algorithm's AI Red Te
 
 1. **Clone or download this repository**
 ```powershell
-git clone https://github.com/your-username/aram-landing.git
-cd aram-landing
+git clone https://github.com/yaswa211/aram-landing-nextjs.git
+cd aram-landing-nextjs
 ```
 
 2. **Install dependencies**
